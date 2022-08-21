@@ -34,7 +34,9 @@ public class B108 {
             int quotient = groupNum / N_GondolaSum;
             int remainder = groupNum % N_GondolaSum;
             int lap = quotient / GondolaList.length;
-            Arrays.stream(results).forEach(n -> n * lap);
+            for (int m = 0; m < M; m++) {
+                results[m] *= lap;
+            }
         }
 
         System.out.println(results);
